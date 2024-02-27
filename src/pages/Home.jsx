@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import GameCard from '../components/GameCard'
 import Search from '../components/Search'
 import Client from '../services/api'
+import NewGameCard from '../components/NewGameCard'
 const Home = () => {
   const searchRef = useRef(null)
   const [games, setGames] = useState([])
@@ -35,9 +36,14 @@ const Home = () => {
           ) : (
             <h2>No Games Found</h2>
           )
-        ) : (
-          games.map((game) => <GameCard key={game._id} game={game} />)
+        ) : ( 
+
+          games.map((game) => <><GameCard key={game._id} game={game} /></>)
+          
+         
+
         )}
+        <NewGameCard />
       </div>
     </div>
   )
