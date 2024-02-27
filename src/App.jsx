@@ -5,6 +5,7 @@ import Nav from './components/Nav'
 import About from './pages/About'
 import AddGame from './pages/AddGame'
 import GameDetails from './pages/GameDetails'
+import UpdateGame from './pages/UpdateGame'
 const App = () => (
   <div>
   <Nav />
@@ -14,6 +15,7 @@ const App = () => (
       <Route path="/game/:id" element={<GameDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/addgames" element={<AddGame />} />
+        <Route path='/game/update/:id' element={<UpdateGame />}/>
     </Routes>
     </main>
   </div>

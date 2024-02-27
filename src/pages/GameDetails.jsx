@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Client from '../services/api'
 const GameDetails = () => {
+  const navigate = useNavigate()
   useEffect(() => {
     Client.get('/game')
       .then((response) => {
@@ -23,24 +24,37 @@ const GameDetails = () => {
     const filteredGames = games.find((game) => game._id === id)
     setGameDetails(filteredGames)
   }
+  const handleSubmit = () => {
+    Client.delete(`/game/${id}`, {}).then((response) => {
+      console.log(response)
+      navigate('/game')
+    })
+  }
+  const handleUpdate = () => {
+    navigate(`/game/update/${id}`)
+  }
   console.log(games)
   return (
     <div>
-    {gameDetails ? <div>
-      <h2>Title: {gameDetails.name}</h2>
-      <img src={gameDetails.image} />
-      <h3>Reviews: </h3>
-      {gameDetails.reviews ? (
-        gameDetails.reviews.map((review) => (
-          <div key={review._id}>
-            <h4>{review.title}</h4>
-            <img src={review.pic} alt={review.title} />
-          </div>
-        ))
-      ) : (
-        <p>No reviews available</p>
-      )}
-    </div> : null}
+      {gameDetails ? (
+        <div>
+          <h2>Title: {gameDetails.name}</h2>
+          <img src={gameDetails.image} />
+          <h3>Reviews: </h3>
+          {gameDetails.reviews ? (
+            gameDetails.reviews.map((review) => (
+              <div key={review._id}>
+                <h4>{review.title}</h4>
+                <img src={review.pic} alt={review.title} />
+              </div>
+            ))
+          ) : (
+            <p>No reviews available</p>
+          )}
+          <button onClick={handleSubmit}>Delete</button>
+          <button onClick={handleUpdate}>Update</button>
+        </div>
+      ) : null}
     </div>
   )
 }
