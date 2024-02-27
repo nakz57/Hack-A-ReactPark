@@ -5,9 +5,15 @@ const Nav = () => {
     <div>
       <header>
         <nav>
-          <Link to="/addgames">Add Games</Link>
-          <Link to="/about">About</Link>
-          <Link to="/">Home</Link>
+          <Link className="Link" to="/addgames">
+            Add Games
+          </Link>
+          <Link className="Link" to="/about">
+            About
+          </Link>
+          <Link className="Link" to="/">
+            Home
+          </Link>
         </nav>
       </header>
     </div>
