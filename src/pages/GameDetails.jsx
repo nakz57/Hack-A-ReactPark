@@ -2,26 +2,26 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Client from '../services/api'
 const GameDetails = () => {
-  const [gameDetails, setGameDetails] = useState({})
-  const [games, setGames] = useState([])
-  let { id } = useParams()
   useEffect(() => {
     Client.get('/game')
       .then((response) => {
         console.log(response)
         setGames(response.data)
-        getDetails()
       })
       .catch((error) => {
         console.log(error)
       })
-  },[id])
-  // useEffect(() => {
-  //   // getDetails()
-  // }, [])
+  }, [])
+  const [gameDetails, setGameDetails] = useState({})
+  const [games, setGames] = useState([])
+  let { id } = useParams()
+
+  useEffect(() => {
+    getDetails()
+  })
   const getDetails = () => {
     const filteredGames = games.find((game) => game._id === id)
-    console.log( filteredGames)
+    console.log(filteredGames)
     setGameDetails(filteredGames)
   }
   console.log(games)
