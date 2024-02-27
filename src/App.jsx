@@ -5,6 +5,7 @@ import Nav from './components/Nav'
 import About from './pages/About'
 import AddGame from './pages/AddGame'
 import GameDetails from './pages/GameDetails'
+import UpdateGame from './pages/UpdateGame'
 import Register from './pages/Register'
 import SignIn from './components/SingnIn'
 import { useEffect, useRef, useState } from 'react'
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/game/:id" element={<GameDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/addgames" element={<AddGame />} />
+          <Route path="/game/update/:id" element={<UpdateGame />} />
         </Routes>
       </main>
     </div>

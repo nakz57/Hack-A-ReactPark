@@ -27,7 +27,7 @@ const Home = () => {
     setPresssed(true)
   }
   return (
-    <div>
+    <div className="home-back">
       <Search onSubmit={handleSubmit} searchRef={searchRef} />
       <div className="container">
         {pressed ? (
@@ -36,12 +36,12 @@ const Home = () => {
           ) : (
             <h2>No Games Found</h2>
           )
-        ) : ( 
-
-          games.map((game) => <><GameCard key={game._id} game={game} /></>)
-          
-         
-
+        ) : (
+          games.map((game) => (
+            <>
+              <GameCard key={game._id} game={game} />
+            </>
+          ))
         )}
         <NewGameCard />
       </div>
