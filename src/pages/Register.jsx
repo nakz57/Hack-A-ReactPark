@@ -85,7 +85,7 @@ const Register = () => {
                 formValues.confirmPassword === formValues.password)
             }
           >
-            Sign In
+            Create
           </button>
         </form>
       </div>
