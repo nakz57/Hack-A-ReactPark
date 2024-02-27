@@ -1,8 +1,13 @@
 import './App.css'
-
+import Home from './pages/Home'
+import GameDetails from './pages/GameDetails'
+import { Routes, Route } from 'react-router-dom'
 const App = () => (
   <div>
-    <h1>APP start</h1>
+    <Routes>
+      <Route path="/game" element={<Home />} />
+      <Route path="/game/:id" element={<GameDetails />} />
+    </Routes>
   </div>
 )
 
