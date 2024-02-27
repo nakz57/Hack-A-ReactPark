@@ -1,27 +1,34 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Client from '../services/api'
+import AllRating from '../components/AllRating'
+import AddRating from '../components/AddRating'
 const GameDetails = () => {
   const navigate = useNavigate()
+  const [gameDetails, setGameDetails] = useState({})
+  const [games, setGames] = useState([])
+  // const [render, setRende] = useState({})
+  let { id } = useParams()
+  const zahraa = (a) => {
+    setGameDetails(a)
+  }
   useEffect(() => {
     Client.get('/game')
       .then((response) => {
-        console.log(response)
+        // console.log(response)
         setGames(response.data)
       })
       .catch((error) => {
         console.log(error)
       })
-  }, [])
-  const [gameDetails, setGameDetails] = useState({})
-  const [games, setGames] = useState([])
-  let { id } = useParams()
+  }, [gameDetails])
 
   useEffect(() => {
     getDetails()
   })
   const getDetails = () => {
     const filteredGames = games.find((game) => game._id === id)
+    console.log(filteredGames)
     setGameDetails(filteredGames)
   }
   const handleSubmit = () => {
@@ -41,22 +48,14 @@ const GameDetails = () => {
           <h2 className="about-title">Title: {gameDetails.name}</h2>
           <img className="game-detail-img" src={gameDetails.image} />
           <h4>{gameDetails.description}</h4>
-          <h3 className="game-detail-h">Reviews: </h3>
 
-          {gameDetails.reviews ? (
-            gameDetails.reviews.map((review) => (
-              <div key={review._id}>
-                <h4>{review.title}</h4>
-                <img src={review.pic} alt={review.title} />
-              </div>
-            ))
-          ) : (
-            <p className="game-detail-para">No reviews available</p>
-          )}
           <button onClick={handleSubmit}>Delete</button>
           <button onClick={handleUpdate}>Update</button>
+          <AllRating ratings={gameDetails.ratings} />
         </div>
       ) : null}
+
+      <AddRating id={id} zahraa={zahraa} />
     </div>
   )
 }
