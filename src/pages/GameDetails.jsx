@@ -37,12 +37,10 @@ const GameDetails = () => {
   return (
     <div>
       {gameDetails ? (
-
-        <div className="game-detail-flex game-detail-back">
-          <h2 className="about-title"> {gameDetails.name}</h2>
-          <img className="game-detail-img" src={gameDetails.image} />
+        <div className="game-detail-flex games-detail-back">
+          <h2 className="about-title">Title: {gameDetails.name}</h2>
+          <img className=".game-detail-img" src={gameDetails.image} />
           <h3 className="game-detail-h">Reviews: </h3>
-
           {gameDetails.reviews ? (
             gameDetails.reviews.map((review) => (
               <div key={review._id}>
@@ -51,15 +49,10 @@ const GameDetails = () => {
               </div>
             ))
           ) : (
-
-            <p className="para-text game-detail-para ">No reviews available</p>
-          )}
-
-
+            <p className="game-detail-para">No reviews available</p>
           )}
           <button onClick={handleSubmit}>Delete</button>
           <button onClick={handleUpdate}>Update</button>
-
         </div>
       ) : null}
     </div>

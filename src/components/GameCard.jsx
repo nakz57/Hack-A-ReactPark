@@ -9,7 +9,7 @@ const GameCard = ({ game }) => {
   return (
     <div className="card game-card" onClick={handleClick}>
       <div className="img-wrapper">
-        <img src={game.image} />
+        <img className='card-img' src={game.image} />
       </div>
       <div className="info-wrapper flex-col">
         <h3>{game.name}</h3>
