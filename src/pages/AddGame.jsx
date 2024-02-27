@@ -23,7 +23,7 @@ const AddGame = () => {
     imgRef.current.value = null
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="flex-addGame" onSubmit={handleSubmit}>
       <label htmlFor="text">Name</label>
       <input type="text" id="name" placeholder="Name" ref={nameRef} />
       <label htmlFor="text">Description</label>
