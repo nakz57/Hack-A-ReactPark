@@ -27,7 +27,7 @@ const Home = () => {
     setPresssed(true)
   }
   return (
-    <div>
+    <div className="home-back">
       <Search onSubmit={handleSubmit} searchRef={searchRef} />
       <div className="container">
         {pressed ? (
