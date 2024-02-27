@@ -37,10 +37,12 @@ const GameDetails = () => {
   return (
     <div>
       {gameDetails ? (
-        <div className="game-detail-flex games-detail-back">
+        <div className="game-detail-flex game-detail-back">
           <h2 className="about-title">Title: {gameDetails.name}</h2>
-          <img className=".game-detail-img" src={gameDetails.image} />
+          <img className="game-detail-img" src={gameDetails.image} />
+          <h4>{gameDetails.description}</h4>
           <h3 className="game-detail-h">Reviews: </h3>
+
           {gameDetails.reviews ? (
             gameDetails.reviews.map((review) => (
               <div key={review._id}>
