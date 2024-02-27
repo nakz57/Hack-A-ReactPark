@@ -21,12 +21,12 @@ const GameDetails = () => {
   })
   const getDetails = () => {
     const filteredGames = games.find((game) => game._id === id)
-    console.log(filteredGames)
     setGameDetails(filteredGames)
   }
   console.log(games)
   return (
     <div>
+    {gameDetails ? <div>
       <h2>Title: {gameDetails.name}</h2>
       <img src={gameDetails.image} />
       <h3>Reviews: </h3>
@@ -40,6 +40,7 @@ const GameDetails = () => {
       ) : (
         <p>No reviews available</p>
       )}
+    </div> : null}
     </div>
   )
 }
