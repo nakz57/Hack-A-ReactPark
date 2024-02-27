@@ -47,16 +47,16 @@ const UpdateGame = () => {
       {gameDetails ? (
         <form onSubmit={handleUpdateDate}>
           <label htmlFor="text">Name</label>
-          <input value={gameDetails.name} type="text" id="name" ref={nameRef} />
+          <input defaultValue={gameDetails.name} type="text" id="name" ref={nameRef} />
           <label htmlFor="text">Description</label>
           <input
             type="text"
             id="description"
-            value={gameDetails.description}
+            defaultValue={gameDetails.description}
             ref={desRef}
           />
           <label htmlFor="text">Image</label>
-          <input type="url" id="image" value={gameDetails.image} ref={imgRef} />
+          <input type="url" id="image" defaultValue={gameDetails.image} ref={imgRef} />
 
           <button type="submit">Update</button>
         </form>
