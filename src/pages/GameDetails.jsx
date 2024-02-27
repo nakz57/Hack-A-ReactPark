@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Client from '../services/api'
+import AllRating from '../components/AllRating'
+import AddRating from '../components/AddRating'
 const GameDetails = () => {
   useEffect(() => {
     Client.get('/game')
       .then((response) => {
-        console.log(response)
+        // console.log(response)
         setGames(response.data)
       })
       .catch((error) => {
@@ -24,22 +26,17 @@ const GameDetails = () => {
     console.log(filteredGames)
     setGameDetails(filteredGames)
   }
-  console.log(games)
+  // console.log(games)
   return (
     <div>
-      <h2>Title: {gameDetails.name}</h2>
-      <img src={gameDetails.image} />
-      <h3>Reviews: </h3>
-      {gameDetails.reviews ? (
-        gameDetails.reviews.map((review) => (
-          <div key={review._id}>
-            <h4>{review.title}</h4>
-            <img src={review.pic} alt={review.title} />
-          </div>
-        ))
-      ) : (
-        <p>No reviews available</p>
-      )}
+      {gameDetails ? (
+        <div>
+          <h2>Title: {gameDetails.name}</h2>
+          <img src={gameDetails.image} />
+          <AllRating ratings={gameDetails.ratings} />
+        </div>
+      ) : null}
+      <AddRating id={id} />
     </div>
   )
 }

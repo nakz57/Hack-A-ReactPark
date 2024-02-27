@@ -10,7 +10,6 @@ const Home = () => {
   useEffect(() => {
     Client.get('/game')
       .then((response) => {
-        console.log(response)
         setGames(response.data)
       })
       .catch((error) => {
