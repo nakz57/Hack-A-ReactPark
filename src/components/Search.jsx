@@ -1,12 +1,15 @@
-const Search = ({ onSubmit,searchRef}) => {
+const Search = ({ onSubmit, searchRef }) => {
   return (
-    <form onSubmit={onSubmit}>
+    <form className="search" onSubmit={onSubmit}>
       <input
+        className="searchTerm"
         type="text"
         ref={searchRef}
         placeholder="Search for games..."
       />
-      <button type="submit">Search</button>
+      <button className="searchButton" type="submit">
+        Search
+      </button>
     </form>
   )
 }

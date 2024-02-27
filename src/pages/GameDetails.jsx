@@ -26,21 +26,23 @@ const GameDetails = () => {
   console.log(games)
   return (
     <div>
-    {gameDetails ? <div>
-      <h2>Title: {gameDetails.name}</h2>
-      <img src={gameDetails.image} />
-      <h3>Reviews: </h3>
-      {gameDetails.reviews ? (
-        gameDetails.reviews.map((review) => (
-          <div key={review._id}>
-            <h4>{review.title}</h4>
-            <img src={review.pic} alt={review.title} />
-          </div>
-        ))
-      ) : (
-        <p>No reviews available</p>
-      )}
-    </div> : null}
+      {gameDetails ? (
+        <div className="game-detail-flex game-detail-back">
+          <h2 className="about-title"> {gameDetails.name}</h2>
+          <img className="game-detail-img" src={gameDetails.image} />
+          <h3 className="game-detail-h">Reviews: </h3>
+          {gameDetails.reviews ? (
+            gameDetails.reviews.map((review) => (
+              <div key={review._id}>
+                <h4>{review.title}</h4>
+                <img src={review.pic} alt={review.title} />
+              </div>
+            ))
+          ) : (
+            <p className="para-text game-detail-para ">No reviews available</p>
+          )}
+        </div>
+      ) : null}
     </div>
   )
 }
