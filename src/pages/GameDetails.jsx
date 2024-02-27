@@ -4,6 +4,13 @@ import Client from '../services/api'
 import AllRating from '../components/AllRating'
 import AddRating from '../components/AddRating'
 const GameDetails = () => {
+  const [gameDetails, setGameDetails] = useState({})
+  const [games, setGames] = useState([])
+  // const [render, setRende] = useState({})
+  let { id } = useParams()
+  const zahraa = (a) => {
+    setGameDetails(a)
+  }
   useEffect(() => {
     Client.get('/game')
       .then((response) => {
@@ -13,10 +20,7 @@ const GameDetails = () => {
       .catch((error) => {
         console.log(error)
       })
-  }, [])
-  const [gameDetails, setGameDetails] = useState({})
-  const [games, setGames] = useState([])
-  let { id } = useParams()
+  }, [gameDetails])
 
   useEffect(() => {
     getDetails()
@@ -26,17 +30,17 @@ const GameDetails = () => {
     console.log(filteredGames)
     setGameDetails(filteredGames)
   }
-  // console.log(games)
   return (
     <div>
       {gameDetails ? (
         <div>
           <h2>Title: {gameDetails.name}</h2>
           <img src={gameDetails.image} />
+
           <AllRating ratings={gameDetails.ratings} />
         </div>
       ) : null}
-      <AddRating id={id} />
+      <AddRating id={id} zahraa={zahraa} />
     </div>
   )
 }
