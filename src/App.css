@@ -24,15 +24,22 @@ nav {
 .about-title {
   text-align: center;
   font-size: 50px;
-  background-color: rgb(239, 239, 15);
+  /* background-color: rgb(239, 239, 15); */
 }
 
 .about-para {
   text-align: center;
+  border: 50px solid transparent;
+  padding: 15px;
+  border-image: url(https://t4.ftcdn.net/jpg/01/81/72/09/360_F_181720980_pOAVAZn1Hy6o7UH7xR2g4mfMPRpffMGL.jpg)
+    30% round;
+  background-color: white;
 }
 .about-div {
   margin: -33.5px -8px 0 -8px;
-  background-color: rgb(239, 239, 15);
+  background-image: url('https://media.cntraveler.com/photos/604a384ee77f3d8c4d2e42f5/16:9/w_2560%2Cc_limit/01_2019__DCA.0007-scaledUniversal%2520Studios%2520Hollywood.jpg');
   height: 100vh;
   width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
