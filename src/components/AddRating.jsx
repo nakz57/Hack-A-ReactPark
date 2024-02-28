@@ -52,7 +52,7 @@ const AddRating = ({ id, ratings, zahraa }) => {
     <div>
       {/* <AllRating ratings={rating} setRating={setRating} /> */}
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="add-rating-form">
         <label htmlFor="rating">Rating:</label>
         <input
           id="rating"
@@ -67,7 +67,7 @@ const AddRating = ({ id, ratings, zahraa }) => {
           onChange={handleChange}
           value={rating.content}
         />
-        <button type="submit">Add</button>
+        <button className='game-details-button' type="submit">Add</button>
       </form>
     </div>
   )
