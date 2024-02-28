@@ -2,14 +2,14 @@ body {
   margin: 0;
   width: 100vw;
 }
-nav {
+.nav-bar {
   display: flex;
   justify-content: end;
   align-items: center;
-  background-color: orangered;
+  background-color: #f29412;
   /* margin: -8px -8px 0 -8px; */
-  padding: 20px;
-  border-bottom: 3px solid black;
+  padding: 10px;
+  border: 2px solid black;
 }
 
 .Link {
@@ -54,13 +54,13 @@ nav {
   max-height: 380px;
   border-radius: 15px;
   border: 3px solid black;
-  background-color: #2075f4;
+  background-color: #ffbf00bd;
   cursor: pointer;
   transition: 0.5s;
 }
 
 .home-back {
-  background-image: url(https://media.disneylandparis.com/d4th/en-gb/images/HD13302_2_2050jan01_world_disneyland-park-dlp-website-visual_5-2_tcm752-248638.jpg?w=1920&f=webp);
+  background-image: url(https://www.scruffydogltd.com/wp-content/uploads/2022/08/Cambodia_Entrance-WOW_EL_140121_update4-scaled.jpg);
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -75,7 +75,7 @@ nav {
   background-color: #994419;
 }
 .card:hover {
-  background-color: orangered;
+  background-color: #f29412;
 }
 
 .card .img-wrapper {
@@ -86,7 +86,7 @@ nav {
   width: 100%;
   height: 200px;
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .card .info-wrapper {
@@ -129,41 +129,6 @@ nav {
   justify-content: center;
 }
 
-.game-detail-img {
-  width: 500px;
-  height: 400px;
-  border: 5px solid;
-  border-image: linear-gradient(45deg, rgb(0, 0, 0), orangered) 1;
-}
-
-.game-detail-flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.game-detail-back {
-  background-color: rgb(177, 0, 0);
-  height: 100vh;
-  /* width: 100vw; */
-  background-size: cover;
-}
-
-.game-detail-h {
-  font-size: 30px;
-}
-
-.game-detail-para {
-  border: 5px solid;
-  border-image: linear-gradient(45deg, yellow, orangered) 1;
-  font-size: 30px;
-  color: black;
-  height: 100px;
-  width: 300px;
-  background-color: rgba(240, 248, 255, 0.783);
-}
-
 .search {
   width: 100%;
   position: relative;
@@ -173,7 +138,7 @@ nav {
 
 .searchTerm {
   width: 80%;
-  border: 3px solid #2075f4;
+  border: 3px solid #6e6e6e;
   border-right: none;
   padding: 5px;
   height: 30px;
@@ -183,14 +148,14 @@ nav {
 }
 
 .searchTerm:focus {
-  color: orangered;
+  color: black;
 }
 
 .searchButton {
   width: 80px;
   height: 46px;
-  border: 1px solid #2075f4;
-  background: #2075f4;
+  border: 1px solid #575757;
+  background: #575757;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
@@ -202,7 +167,6 @@ nav {
   opacity: 0.8;
 }
 
-/*Resize the wrap to see the search bar change!*/
 .wrap {
   width: 30%;
   position: absolute;
@@ -215,4 +179,247 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: start;
+}
+
+.addGame-img {
+  background-image: url('https://cdn.pixabay.com/animation/2023/03/28/02/15/02-15-52-868_512.gif');
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.flexa {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-add {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 75px 75px 75px;
+}
+
+.container-signin {
+  display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: 50px 50px 50px;
+}
+
+.container-out {
+  display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: 50px 50px 50px 50px;
+}
+
+.item {
+  background-color: #f2f2f200;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+
+.btn-add {
+  width: 100px;
+  height: 100px;
+}
+
+.add-text {
+  font-size: 30px;
+}
+
+.add-text-reg {
+  font-size: 25px;
+}
+
+.sign-img {
+  background-image: url('https://68.media.tumblr.com/30a64d4b570bbc64ec6e98a4ec2eb66e/tumblr_p0ykkdXu2M1uxrf48o1_1280.gif');
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.reg-back {
+  background-image: url('https://www.parksavers.com/wp-content/uploads/2018/08/Good-Morning-Disneyland-X3.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.border-sign {
+  font-size: 20px;
+  border: 3px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(192, 192, 0, 0.286);
+}
+.all-rating-container {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.rating-item {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.add-rating-form {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-rating-form input,
+.add-rating-form button {
+  margin: 5px 0;
+  padding: 5px;
+}
+.game-detail-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-detail-back {
+  margin: 20px;
+  background-color: white;
+}
+.about-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #2c3e50;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 18px;
+  color: #34495e;
+  text-align: justify;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.game-detail-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 3px solid #ecf0f1;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-details-button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  font-weight: bold;
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-details-button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.delete-button {
+  background: linear-gradient(45deg, #6f140a, #e9311c);
+}
+
+.update-button {
+  background: linear-gradient(45deg, #1e0882, #09684e);
+}
+.game-details-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.game-info {
+  flex: 1;
+  margin-right: 20px;
+  padding: 25px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.game-reviews {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.add-rating-section {
+  margin-top: 20px;
+}
+.rating-box {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rating-box h4 {
+  margin-right: 15px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.rating-box h3 {
+  color: #333;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.rating-item h4 {
+  margin-right: 10px;
+}
+.star {
+  color: gold;
+  margin-right: 5px;
+}
+
+.star::before {
+  content: '⭐';
+}
+.all-rating-container {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow-y: auto;
+  max-height: 400px;
+  background-color: #f8f9fa;
+}
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }

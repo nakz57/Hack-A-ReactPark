@@ -23,11 +23,13 @@ const SignIn = ({ setUser }) => {
   }
 
   return (
-    <div className="signin col">
+    <div className="container container-signin sign-img">
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
-          <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
+          <div className="item flexa">
+            <label className="add-text" htmlFor="email">
+              Email
+            </label>
             <input
               onChange={handleChange}
               name="email"
@@ -37,8 +39,10 @@ const SignIn = ({ setUser }) => {
               required
             />
           </div>
-          <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
+          <div className="item flexa">
+            <label className="add-text" htmlFor="password">
+              Password
+            </label>
             <input
               onChange={handleChange}
               type="password"
@@ -47,12 +51,17 @@ const SignIn = ({ setUser }) => {
               required
             />
           </div>
-          <button disabled={!formValues.email || !formValues.password}>
-            Sign In
-          </button>
+          <div className="item flexa">
+            <button disabled={!formValues.email || !formValues.password}>
+              Sign In
+            </button>
+          </div>
         </form>
-        <h3>
-          if dont have account <Link to="/register">Register</Link>
+        <h3 className="border-sign">
+          if dont have account{' '}
+          <Link className="Link" to="/register">
+            Register
+          </Link>
         </h3>
       </div>
     </div>

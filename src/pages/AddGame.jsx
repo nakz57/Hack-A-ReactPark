@@ -23,20 +23,39 @@ const AddGame = () => {
     imgRef.current.value = null
   }
   return (
-    <form className="flex-addGame" onSubmit={handleSubmit}>
-      <label htmlFor="text">Name</label>
-      <input type="text" id="name" placeholder="Name" ref={nameRef} />
-      <label htmlFor="text">Description</label>
-      <input
-        type="text"
-        id="description"
-        placeholder="Description"
-        ref={desRef}
-      />
-      <label htmlFor="text">Image</label>
-      <input type="url" id="image" placeholder="Image" ref={imgRef} />
+    <form
+      className="container container-add addGame-img"
+      onSubmit={handleSubmit}
+    >
+      <div className="item flexa">
+        <label className="add-text" htmlFor="text">
+          Name
+        </label>
+        <input type="text" id="name" placeholder="Name" ref={nameRef} />
+      </div>
 
-      <button type="submit">Add</button>
+      <div className="item flexa">
+        <label className="add-text" htmlFor="text">
+          Image
+        </label>
+        <input type="url" id="image" placeholder="Image" ref={imgRef} />
+      </div>
+      <div className="item flexa">
+        <label className="add-text" htmlFor="text">
+          Description
+        </label>
+        <textarea
+          type="text"
+          id="description"
+          placeholder="Description"
+          ref={desRef}
+          cols="30"
+          rows="5"
+        ></textarea>
+      </div>
+      <div className="flexa item">
+        <button type="submit">Add</button>
+      </div>
     </form>
   )
 }

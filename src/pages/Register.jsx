@@ -32,11 +32,13 @@ const Register = () => {
   }
 
   return (
-    <div className="signin col">
-      <div className="card-overlay centered">
-        <form className="col" onSubmit={handleSubmit}>
-          <div className="input-wrapper">
-            <label htmlFor="name">Name</label>
+    <div className="container container-out reg-back">
+      <div className="item flexa">
+        <form onSubmit={handleSubmit}>
+          <div className="item flexa">
+            <label className="add-text-reg" htmlFor="name">
+              Name
+            </label>
             <input
               onChange={handleChange}
               name="name"
@@ -46,8 +48,10 @@ const Register = () => {
               required
             />
           </div>
-          <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
+          <div className="item flexa">
+            <label className="add-text-reg" htmlFor="email">
+              Email
+            </label>
             <input
               onChange={handleChange}
               name="email"
@@ -58,8 +62,10 @@ const Register = () => {
             />
           </div>
 
-          <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
+          <div className="item flexa">
+            <label className="add-text-reg" htmlFor="password">
+              Password
+            </label>
             <input
               onChange={handleChange}
               type="password"
@@ -68,8 +74,10 @@ const Register = () => {
               required
             />
           </div>
-          <div className="input-wrapper">
-            <label htmlFor="confirmPassword">Confirm Password</label>
+          <div className="item flexa">
+            <label className="add-text-reg" htmlFor="confirmPassword">
+              Confirm Password
+            </label>
             <input
               onChange={handleChange}
               type="password"
@@ -78,15 +86,18 @@ const Register = () => {
               required
             />
           </div>
-          <button
-            disabled={
-              !formValues.email ||
-              (!formValues.password &&
-                formValues.confirmPassword === formValues.password)
-            }
-          >
-            Create
-          </button>
+
+          <div className="item flexa">
+            <button
+              disabled={
+                !formValues.email ||
+                (!formValues.password &&
+                  formValues.confirmPassword === formValues.password)
+              }
+            >
+              Create
+            </button>
+          </div>
         </form>
       </div>
     </div>
