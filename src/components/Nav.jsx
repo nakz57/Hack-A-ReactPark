@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 const Nav = ({ user, handleLogOut }) => {
+  //console.log(user)
   let userOptions
   if (user) {
     userOptions = (

@@ -11,7 +11,7 @@ import SignIn from './components/SingnIn'
 import { useEffect, useRef, useState } from 'react'
 import { CheckSession } from './services/Auth'
 const App = () => {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState({})
   const checkToken = async () => {
     //If a token exists, sends token to localStorage to persist logged in user
     const user = await CheckSession()
@@ -35,6 +35,7 @@ const App = () => {
       <Nav user={user} handleLogOut={handleLogOut} />
       <main>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/game" element={<Home />} />

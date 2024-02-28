@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 const GameCard = ({ game }) => {
   const navigate = useNavigate()
   const handleClick = () => {
-    console.log({ game })
+    //console.log({ game })
     navigate(`/game/${game._id}`)
   }
   return (

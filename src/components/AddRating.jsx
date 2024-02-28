@@ -3,7 +3,7 @@ import Client from '../services/api'
 import { Navigate, useNavigate } from 'react-router-dom'
 import AllRating from '../components/AllRating'
 
-const AddRating = ({ id, ratings, zahraa }) => {
+const AddRating = ({ id, ratings, ali, setGameDetails }) => {
   const navigate = useNavigate()
   const initialState = {
     rating: '',
@@ -38,15 +38,16 @@ const AddRating = ({ id, ratings, zahraa }) => {
       .then((response) => {
         console.log(response.data)
         // setRating(response.data)
-        zahraa(response.data)
         // navigate(`/game/${id}`)
+        ali(response.data)
       })
       .catch((error) => {
         console.log(error)
       })
+    // zahraa
 
     setRating(initialState)
-    navigate(`/game/${id}`)
+    // navigate(`/game/${id}`)
   }
   return (
     <div>
