@@ -21,7 +21,7 @@ const GameDetails = () => {
       .catch((error) => {
         console.log(error)
       })
-  }, [gameDetails])
+  }, [])
 
   useEffect(() => {
     getDetails()
@@ -44,18 +44,25 @@ const GameDetails = () => {
   return (
     <div>
       {gameDetails ? (
-        <div className="game-detail-flex game-detail-back">
-          <h2 className="about-title">Title: {gameDetails.name}</h2>
-          <img className="game-detail-img" src={gameDetails.image} />
-          <h4>{gameDetails.description}</h4>
-
-          <button onClick={handleSubmit}>Delete</button>
-          <button onClick={handleUpdate}>Update</button>
-          <AllRating ratings={gameDetails.ratings} />
+        <div className="game-details-container">
+          <div className="game-info">
+            <h2 className="about-title">{gameDetails.name}</h2>
+            <img className="game-detail-img" src={gameDetails.image} />
+            <h4>Description:{gameDetails.description}</h4>
+            <div className="buttons-container">
+    <button className="game-details-button delete-button" onClick={handleSubmit}>Delete</button>
+    <button className="game-details-button update-button" onClick={handleUpdate}>Update</button>
+  </div>
+          </div>
+          <div className="game-reviews">
+            <AllRating ratings={gameDetails.ratings} />
+            <div className="add-rating-section">
+        <AddRating id={id} zahraa={zahraa} />
+      </div>
+          </div>
         </div>
       ) : null}
-
-      <AddRating id={id} zahraa={zahraa} />
+      
     </div>
   )
 }

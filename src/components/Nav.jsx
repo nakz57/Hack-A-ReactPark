@@ -5,7 +5,7 @@ const Nav = ({ user, handleLogOut }) => {
   if (user) {
     userOptions = (
       <nav className="nav-bar">
-        <h3>Welcome! {user.email}</h3>
+        <h3>Welcome! {user.name}</h3>
         <Link className="Link" to="/game">
           Home
         </Link>
