@@ -11,14 +11,18 @@ const AllRating = ({ ratings }) => {
   return (
     <div className="all-rating-container">
       {avarageRating ? (
-        <h3>Reviews: {Array(avarageRating).fill(<span className="star"></span>)}</h3>
+        <h3>
+          Reviews: {Array(avarageRating).fill(<span className="star"></span>)}
+        </h3>
       ) : null}
       {ratings ? (
         ratings.map((rating) => (
           <div className="rating-box" key={rating._id}>
-            <h4> {Array(rating.rating).fill(<span className="star"></span>)}</h4>
+            <h4>
+              {' '}
+              {Array(rating.rating).fill(<span className="star"></span>)}
+            </h4>
             <h3> Contant: {rating.content}</h3>
-
             {/* <img src={review.pic} alt={review.title} /> */}
           </div>
         ))
@@ -28,5 +32,4 @@ const AllRating = ({ ratings }) => {
     </div>
   )
 }
-
 export default AllRating
