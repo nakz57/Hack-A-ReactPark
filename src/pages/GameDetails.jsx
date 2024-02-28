@@ -50,19 +50,28 @@ const GameDetails = () => {
             <img className="game-detail-img" src={gameDetails.image} />
             <h4>Description:{gameDetails.description}</h4>
             <div className="buttons-container">
-    <button className="game-details-button delete-button" onClick={handleSubmit}>Delete</button>
-    <button className="game-details-button update-button" onClick={handleUpdate}>Update</button>
-  </div>
+              <button
+                className="game-details-button delete-button"
+                onClick={handleSubmit}
+              >
+                Delete
+              </button>
+              <button
+                className="game-details-button update-button"
+                onClick={handleUpdate}
+              >
+                Update
+              </button>
+            </div>
           </div>
           <div className="game-reviews">
             <AllRating ratings={gameDetails.ratings} />
             <div className="add-rating-section">
-        <AddRating id={id} zahraa={zahraa} />
-      </div>
+              <AddRating id={id} zahraa={zahraa} />
+            </div>
           </div>
         </div>
       ) : null}
-      
     </div>
   )
 }

@@ -43,23 +43,46 @@ const UpdateGame = () => {
     imgRef.current.value = null
   }
   return (
-    <div>
+    <div className="update-img">
       {gameDetails ? (
-        <form onSubmit={handleUpdateDate}>
-          <label htmlFor="text">Name</label>
-          <input defaultValue={gameDetails.name} type="text" id="name" ref={nameRef} />
-          <label htmlFor="text">Description</label>
-          <input
-            type="text"
-            id="description"
-            defaultValue={gameDetails.description}
-            ref={desRef}
-          />
-          <label htmlFor="text">Image</label>
-          <input type="url" id="image" defaultValue={gameDetails.image} ref={imgRef} />
-
-          <button type="submit">Update</button>
-        </form>
+        <div>
+          <form
+            className="container
+          container-update"
+            onSubmit={handleUpdateDate}
+          >
+            <label className="add-text" htmlFor="text">
+              Name:
+            </label>
+            <input
+              defaultValue={gameDetails.name}
+              type="text"
+              id="name"
+              ref={nameRef}
+            />
+            <label className="add-text" htmlFor="text">
+              Description:
+            </label>
+            <input
+              type="text"
+              id="description"
+              defaultValue={gameDetails.description}
+              ref={desRef}
+            />
+            <label className="add-text" htmlFor="text">
+              Image:
+            </label>
+            <input
+              type="url"
+              id="image"
+              defaultValue={gameDetails.image}
+              ref={imgRef}
+            />
+            <div className="flexa item">
+              <button type="submit">Update</button>
+            </div>
+          </form>
+        </div>
       ) : null}
     </div>
   )

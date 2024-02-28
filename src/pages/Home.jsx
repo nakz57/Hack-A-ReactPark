@@ -29,6 +29,7 @@ const Home = () => {
   return (
     <div className="home-back">
       <Search onSubmit={handleSubmit} searchRef={searchRef} />
+      <h1>Hack-A-Park</h1>
       <div className="container">
         {pressed ? (
           searchResults.length > 0 ? (
