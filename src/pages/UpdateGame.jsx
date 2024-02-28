@@ -35,7 +35,7 @@ const UpdateGame = () => {
       description: desRef.current.value,
       image: imgRef.current.value
     }).then((response) => {
-      console.log(response)
+      // console.log(response)
       navigate('/game')
     })
     nameRef.current.value = null
@@ -47,7 +47,12 @@ const UpdateGame = () => {
       {gameDetails ? (
         <form onSubmit={handleUpdateDate}>
           <label htmlFor="text">Name</label>
-          <input defaultValue={gameDetails.name} type="text" id="name" ref={nameRef} />
+          <input
+            defaultValue={gameDetails.name}
+            type="text"
+            id="name"
+            ref={nameRef}
+          />
           <label htmlFor="text">Description</label>
           <input
             type="text"
@@ -56,7 +61,12 @@ const UpdateGame = () => {
             ref={desRef}
           />
           <label htmlFor="text">Image</label>
-          <input type="url" id="image" defaultValue={gameDetails.image} ref={imgRef} />
+          <input
+            type="url"
+            id="image"
+            defaultValue={gameDetails.image}
+            ref={imgRef}
+          />
 
           <button type="submit">Update</button>
         </form>
