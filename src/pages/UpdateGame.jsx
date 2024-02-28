@@ -35,7 +35,7 @@ const UpdateGame = () => {
       description: desRef.current.value,
       image: imgRef.current.value
     }).then((response) => {
-      console.log(response)
+      // console.log(response)
       navigate('/game')
     })
     nameRef.current.value = null
