@@ -28,7 +28,7 @@ const Register = () => {
       password: '',
       confirmPassword: ''
     })
-    navigate('/')
+    navigate('/game')
   }
 
   return (

@@ -11,7 +11,7 @@ import SignIn from './components/SingnIn'
 import { useEffect, useRef, useState } from 'react'
 import { CheckSession } from './services/Auth'
 const App = () => {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState({})
   const checkToken = async () => {
     //If a token exists, sends token to localStorage to persist logged in user
     const user = await CheckSession()
