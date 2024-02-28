@@ -2,14 +2,14 @@ body {
   margin: 0;
   width: 100vw;
 }
-nav {
+.nav-bar {
   display: flex;
   justify-content: end;
   align-items: center;
-  background-color: orangered;
+  background-color: #f29412;
   /* margin: -8px -8px 0 -8px; */
-  padding: 20px;
-  border-bottom: 3px solid black;
+  padding: 10px;
+  border: 2px solid black;
 }
 
 .Link {
@@ -54,13 +54,13 @@ nav {
   max-height: 380px;
   border-radius: 15px;
   border: 3px solid black;
-  background-color: #2075f4;
+  background-color: #ffbf00bd;
   cursor: pointer;
   transition: 0.5s;
 }
 
 .home-back {
-  background-image: url(https://media.disneylandparis.com/d4th/en-gb/images/HD13302_2_2050jan01_world_disneyland-park-dlp-website-visual_5-2_tcm752-248638.jpg?w=1920&f=webp);
+  background-image: url(https://www.scruffydogltd.com/wp-content/uploads/2022/08/Cambodia_Entrance-WOW_EL_140121_update4-scaled.jpg);
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -75,7 +75,7 @@ nav {
   background-color: #994419;
 }
 .card:hover {
-  background-color: orangered;
+  background-color: #f29412;
 }
 
 .card .img-wrapper {
@@ -86,7 +86,7 @@ nav {
   width: 100%;
   height: 200px;
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .card .info-wrapper {
@@ -173,7 +173,7 @@ nav {
 
 .searchTerm {
   width: 80%;
-  border: 3px solid #2075f4;
+  border: 3px solid #6e6e6e;
   border-right: none;
   padding: 5px;
   height: 30px;
@@ -183,14 +183,14 @@ nav {
 }
 
 .searchTerm:focus {
-  color: orangered;
+  color: black;
 }
 
 .searchButton {
   width: 80px;
   height: 46px;
-  border: 1px solid #2075f4;
-  background: #2075f4;
+  border: 1px solid #575757;
+  background: #575757;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
@@ -215,4 +215,79 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: start;
+}
+
+.addGame-img {
+  background-image: url('https://cdn.pixabay.com/animation/2023/03/28/02/15/02-15-52-868_512.gif');
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.flexa {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-add {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 75px 75px 75px;
+}
+
+.container-signin {
+  display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: 50px 50px 50px;
+}
+
+.container-out {
+  display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: 50px 50px 50px 50px;
+}
+
+.item {
+  background-color: #f2f2f200;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+
+.btn-add {
+  width: 100px;
+  height: 100px;
+}
+
+.add-text {
+  font-size: 30px;
+}
+
+.add-text-reg {
+  font-size: 25px;
+}
+
+.sign-img {
+  background-image: url('https://68.media.tumblr.com/30a64d4b570bbc64ec6e98a4ec2eb66e/tumblr_p0ykkdXu2M1uxrf48o1_1280.gif');
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.reg-back {
+  background-image: url('https://www.parksavers.com/wp-content/uploads/2018/08/Good-Morning-Disneyland-X3.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.border-sign {
+  font-size: 20px;
+  border: 3px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(192, 192, 0, 0.286);
 }
