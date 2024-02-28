@@ -23,7 +23,7 @@ const SignIn = ({ setUser }) => {
   }
 
   return (
-    <div className="container container-signin sign-img">
+    <div className=" container-signin sign-img">
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
           <div className="item flexa">

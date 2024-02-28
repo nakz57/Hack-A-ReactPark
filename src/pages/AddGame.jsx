@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import Client from '../services/api'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import { Navigate } from 'react-router-dom'
@@ -8,6 +8,7 @@ const AddGame = () => {
   const nameRef = useRef(null)
   const desRef = useRef(null)
   const imgRef = useRef(null)
+
   const handleSubmit = (e) => {
     e.preventDefault()
     Client.post('/game/add', {
